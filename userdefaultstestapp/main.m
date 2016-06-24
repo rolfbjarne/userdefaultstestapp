@@ -1,0 +1,16 @@
+//
+//  main.m
+//  userdefaultstestapp
+//
+//  Created by Rolf Bjarne Kvinge on 24/06/16.
+//  Copyright © 2016 Rolf Bjarne Kvinge. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+
+int main(int argc, char * argv[]) {
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+}
