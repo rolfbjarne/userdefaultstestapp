@@ -22,6 +22,19 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
+    
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"obj" forKey:@"key"];
+    id obj = [defaults objectForKey: @"key"];
+    if (!obj) {
+        printf ("TEST FAILED, OBJECT DISAPPEARED:\n");
+    } else {
+        printf ("TEST PASSED, OBJECT STORED:\n");
+    }
+    printf ("%s\n", [[[defaults dictionaryRepresentation] description] UTF8String]);
+    
+    
     return YES;
 }
 
